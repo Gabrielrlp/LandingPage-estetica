@@ -1186,6 +1186,66 @@ h2 em {
   pointer-events: none;
 }
 
+/* Fotos reais (logo, procedimento facial, sobre e antes/depois) */
+.image-placeholder.has-photo {
+  display: block;
+  border: 0;
+  background: #ecddd6;
+}
+.image-placeholder.has-photo::before,
+.image-placeholder.has-photo::after {
+  display: none;
+}
+.photo-fill {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Logo: recorte aproximado no rosto, dentro do círculo */
+.brand-photo.has-photo {
+  box-shadow: 0 0 0 1px rgba(157, 117, 111, 0.35);
+}
+.photo-fill.brand-photo-image {
+  inset: auto;
+  width: 220%;
+  max-width: none;
+  height: auto;
+  left: -71%;
+  top: -56%;
+}
+
+/* Sobre: mantém rosto e letreiro da clínica visíveis */
+.photo-fill.about-photo-image {
+  object-position: center 25%;
+}
+
+/* Antes e depois: a imagem única é dividida, metade em cada quadro */
+.photo-fill.ba-split {
+  inset: 0 auto 0 0;
+  width: 200%;
+  max-width: none;
+  object-position: center 30%;
+}
+.photo-fill.ba-split-after {
+  left: -100%;
+}
+.ba-photo.has-photo .placeholder-label {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  z-index: 1;
+  padding: 5px 9px;
+  background: rgba(255, 250, 247, 0.92);
+  color: var(--rose-deep);
+  font-size: 8px;
+  letter-spacing: 1.4px;
+}
+
 @media (max-width: 1000px) {
   .container {
     width: min(var(--container), calc(100% - 42px));

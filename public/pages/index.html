@@ -29,16 +29,14 @@
           aria-label="Isadora Câmara Clinic — início"
         >
           <!-- IMAGEM 1: substitua este círculo pela foto de rosto que será usada como marca. -->
-          <span
-            class="image-placeholder brand-photo"
-            aria-label="Espaço reservado para a foto da Isadora"
-          >
-            <span class="placeholder-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M4 7.5h3l1.3-2h7.4l1.3 2h3v11H4z" />
-              </svg>
-            </span>
-            <span>FOTO<br />ISADORA</span>
+          <span class="image-placeholder brand-photo has-photo">
+            <img
+              class="photo-fill brand-photo-image"
+              src="../assets/isadora02.jpeg"
+              alt="Isadora Câmara"
+              width="1066"
+              height="1600"
+            >
           </span>
           <span class="brand-text">
             <span class="brand-name">Isadora Câmara</span>
@@ -206,19 +204,15 @@
               <div class="procedure-image-wrap">
                 <!-- IMAGEM 3: insira uma foto relacionada à harmonização facial. -->
                 <div
-                  class="image-placeholder procedure-photo procedure-photo-face"
+                  class="image-placeholder procedure-photo procedure-photo-face has-photo"
                 >
-                  <span
-                    class="placeholder-icon placeholder-icon-large"
-                    aria-hidden="true"
-                    ><svg viewBox="0 0 24 24">
-                      <path d="M4 7.5h3l1.3-2h7.4l1.3 2h3v11H4z" />
-                      <circle cx="12" cy="13" r="3.3" /></svg
-                  ></span>
-                  <span class="placeholder-label"
-                    >FOTO DE<br />HARMONIZAÇÃO FACIAL</span
+                  <img
+                    class="photo-fill"
+                    src="../assets/boca02.jpeg"
+                    alt="Paciente durante atendimento de harmonização facial"
+                    loading="lazy"
+                    decoding="async"
                   >
-                  <span class="placeholder-hint">Imagem profissional</span>
                 </div>
                 <span class="procedure-number">01</span>
               </div>
@@ -302,18 +296,14 @@
           <div class="about-visual">
             <div class="about-frame"></div>
             <!-- IMAGEM 5: insira uma segunda foto da Isadora, do espaço ou do atendimento. -->
-            <div class="image-placeholder about-photo">
-              <span
-                class="placeholder-icon placeholder-icon-large"
-                aria-hidden="true"
-                ><svg viewBox="0 0 24 24">
-                  <path d="M4 7.5h3l1.3-2h7.4l1.3 2h3v11H4z" />
-                  <circle cx="12" cy="13" r="3.3" /></svg
-              ></span>
-              <span class="placeholder-label"
-                >FOTO DA PROFISSIONAL<br />OU DO ESPAÇO</span
+            <div class="image-placeholder about-photo has-photo">
+              <img
+                class="photo-fill about-photo-image"
+                src="../assets/isadora01.jpeg"
+                alt="Isadora Câmara na recepção da clínica"
+                loading="lazy"
+                decoding="async"
               >
-              <span class="placeholder-hint">Imagem complementar</span>
             </div>
             <div class="about-seal" aria-label="Cuidado individual">
               <span>BELEZA</span
@@ -400,20 +390,26 @@
               <p class="ba-category">HARMONIZAÇÃO FACIAL</p>
               <div class="ba-images">
                 <!-- IMAGEM 6: foto ANTES de um caso autorizado de harmonização facial. -->
-                <div class="image-placeholder ba-photo">
-                  <span class="placeholder-icon" aria-hidden="true"
-                    ><svg viewBox="0 0 24 24">
-                      <path d="M4 7.5h3l1.3-2h7.4l1.3 2h3v11H4z" />
-                      <circle cx="12" cy="13" r="3.3" /></svg></span
-                  ><span class="placeholder-label">ANTES</span>
+                <div class="image-placeholder ba-photo has-photo">
+                  <img
+                    class="photo-fill ba-split ba-split-before"
+                    src="../assets/bocaAntesEdepois.jpeg"
+                    alt="Região da boca e do queixo antes do procedimento"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                  <span class="placeholder-label">ANTES</span>
                 </div>
                 <!-- IMAGEM 7: foto DEPOIS do mesmo caso, com enquadramento semelhante. -->
-                <div class="image-placeholder ba-photo">
-                  <span class="placeholder-icon" aria-hidden="true"
-                    ><svg viewBox="0 0 24 24">
-                      <path d="M4 7.5h3l1.3-2h7.4l1.3 2h3v11H4z" />
-                      <circle cx="12" cy="13" r="3.3" /></svg></span
-                  ><span class="placeholder-label">DEPOIS</span>
+                <div class="image-placeholder ba-photo has-photo">
+                  <img
+                    class="photo-fill ba-split ba-split-after"
+                    src="../assets/bocaAntesEdepois.jpeg"
+                    alt="Região da boca e do queixo depois do procedimento"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                  <span class="placeholder-label">DEPOIS</span>
                 </div>
               </div>
               <p class="ba-caption">
