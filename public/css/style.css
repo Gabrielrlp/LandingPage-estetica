@@ -1161,6 +1161,31 @@ h2 em {
   outline-offset: 4px;
 }
 
+/* Imagem principal da Isadora */
+.hero-photo-with-image {
+  position: relative;
+  overflow: hidden;
+}
+
+/* A imagem ocupa todo o espaço disponível */
+.hero-photo-image {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+/* Mantém os detalhes decorativos sobre a fotografia */
+.hero-photo-with-image .photo-corner {
+  z-index: 1;
+  pointer-events: none;
+}
+
 @media (max-width: 1000px) {
   .container {
     width: min(var(--container), calc(100% - 42px));
