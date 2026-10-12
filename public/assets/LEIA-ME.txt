@@ -1,0 +1,20 @@
+ISADORA CÂMARA CLINIC — IMAGENS DO PROTÓTIPO
+
+Esta pasta está reservada para as imagens reais que serão inseridas manualmente.
+Os blocos com borda tracejada na página são marcadores temporários. Eles mostram o local e a proporção aproximada de cada imagem.
+
+Sugestão de nomes para organizar as imagens:
+- isadora-perfil.jpg              Foto principal/rosto usada como marca
+- isadora-destaque.jpg            Foto vertical da profissional na primeira seção
+- harmonizacao-facial.jpg         Imagem do procedimento facial
+- harmonizacao-gluteos.jpg        Imagem do procedimento de glúteos
+- clinica-atendimento.jpg         Foto complementar da profissional ou do espaço
+- facial-antes.jpg                Foto de antes de um caso autorizado
+- facial-depois.jpg               Foto de depois do mesmo caso
+- gluteos-antes.jpg               Foto de antes de um caso autorizado
+- gluteos-depois.jpg              Foto de depois do mesmo caso
+
+Para inserir uma imagem, substitua no index.html o respectivo bloco <div class="image-placeholder ..."> por uma tag <img> com o caminho relativo correto, por exemplo:
+<img class="hero-photo real-photo" src="../assets/isadora-destaque.jpg" alt="Descrição objetiva da imagem">
+
+Não altere o nome das classes dos contêineres externos sem ajustar o CSS. Para fotos de antes e depois, utilize apenas imagens que possam ser divulgadas de acordo com as autorizações e as regras profissionais aplicáveis.
