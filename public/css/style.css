@@ -1084,14 +1084,71 @@ h2 em {
   justify-content: flex-end;
   gap: 14px 20px;
 }
-.footer-contact a {
-  color: var(--rose-deep);
-  font-size: 10px;
+/* Botões de contato do rodapé */
+.footer-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 12px 20px;
+  border: 1px solid var(--rose-deep);
+  border-radius: 2px;
+  font-size: 11px;
   font-weight: 700;
+  letter-spacing: 0.3px;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
 }
-.footer-contact a span {
+.footer-button-icon {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.footer-button-arrow {
+  margin-left: 2px;
   font-size: 13px;
-  margin-left: 5px;
+  font-weight: 400;
+  opacity: 0.8;
+  transition: transform 0.2s ease;
+}
+.footer-button-outline {
+  color: var(--rose-deep);
+  background: transparent;
+}
+.footer-button-outline:hover {
+  color: var(--white);
+  background: var(--rose-deep);
+}
+.footer-button-solid {
+  color: var(--white);
+  background: var(--rose-deep);
+}
+.footer-button-solid:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+.footer-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(137, 84, 91, 0.2);
+}
+.footer-button:hover .footer-button-arrow {
+  transform: translate(2px, -2px);
+}
+.footer-button:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 .footer-contact p {
   width: 100%;
@@ -1099,6 +1156,13 @@ h2 em {
   text-align: right;
   color: #877772;
   font-size: 10px;
+}
+/* Desktop: o endereço fica abaixo dos botões sem alargar a coluna de contato */
+@media (min-width: 1001px) {
+  .footer-contact p {
+    width: 0;
+    min-width: 100%;
+  }
 }
 .footer-bottom {
   display: flex;
@@ -1638,6 +1702,10 @@ h2 em {
   .footer-contact p {
     width: 100%;
     text-align: left;
+  }
+  .footer-button {
+    flex: 1 1 140px;
+    min-height: 48px;
   }
   .footer-bottom {
     align-items: flex-start;

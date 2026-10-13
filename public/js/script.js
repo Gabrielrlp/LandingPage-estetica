@@ -38,3 +38,21 @@ if (menuToggle && navigation) {
 
 const yearElement = document.querySelector("#current-year");
 if (yearElement) yearElement.textContent = new Date().getFullYear();
+
+/* Voltar ao início: qualquer link para #inicio leva ao topo da página.
+   O cabeçalho é fixo (sticky), então o navegador não rolaria até ele sozinho. */
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+document.querySelectorAll('a[href="#inicio"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: reduceMotion.matches ? "auto" : "smooth",
+    });
+    // Leva o foco ao topo para quem navega pelo teclado.
+    document
+      .querySelector(".site-header .brand")
+      ?.focus({ preventScroll: true });
+  });
+});
